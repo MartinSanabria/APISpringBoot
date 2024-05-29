@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Data</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7ebfe;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #531079;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #8a2be2;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .chart {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Population Data</h1>
+
+    <div class="chart-container">
+        <h2>10 Países más poblados del planeta</h2>
+        <div class="chart">
+            <canvas id="highPopulationChart"></canvas>
+        </div>
+
+        <h2>5 Países que incrementaron su población del 2017 al 2018</h2>
+        <div class="chart">
+            <canvas id="populationIncreaseChart"></canvas>
+        </div>
+    </div>
+
+    <h2>Crecimiento en población de Alemania, Italia, España, Francia (1960-1970)</h2>
+    <table id="growthTable">
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Incremento de Población</th>
+                <th>Porcentaje de Crecimiento</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Países que bajaron su población entre 2000 y 2010</h2>
+    <table id="populationDecreaseTable">
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Decremento de Población</th>
+                <th>Porcentaje de Decremento</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Países que incrementaron más su población en porcentaje entre 2017 y 2018</h2>
+    <table id="populationIncreaseGrowthTable">
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Incremento de Población</th>
+                <th>Porcentaje de Incremento</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
